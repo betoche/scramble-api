@@ -51,4 +51,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.hosts << "3000-d0383a3b-7733-4cac-89d6-1dd7d4a40461.ws-us02.gitpod.io"
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
