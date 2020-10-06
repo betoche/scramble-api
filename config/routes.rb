@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     post '/signup', to: 'registrations#create'
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'
+    post '/password/forgot', to: 'passwords#forgot'
+    post '/password/reset', to: 'passwords#reset'
   end
 
   mount Rswag::Ui::Engine => '/api-docs'
